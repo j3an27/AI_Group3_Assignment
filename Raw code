@@ -1,0 +1,15 @@
+from transformers import pipeline
+
+generator = pipeline("text-generation", model="gpt2")
+prompt = "In Kenya, the future of AI is"
+output = generator(prompt, max_length=50, num_return_sequences=1)
+
+print("Generated Text:")
+print(output[0]['generated_text'])from transformers import pipeline
+
+generator = pipeline("text-generation", model="gpt2")
+prompt = "In Kenya, the future of AI is"
+output = generator(prompt, max_length=50, num_return_sequences=1)
+
+print("Generated Text:")
+print(output[0]['generated_text'])
